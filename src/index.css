@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Pitaco Theme */
+.pitaco-gradient {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  min-height: 100vh;
+  position: relative;
+}
+
+.pitaco-card {
+  background: linear-gradient(145deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.stats-card {
+  background: linear-gradient(145deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  backdrop-filter: blur(8px);
+}
+
+.match-card {
+  background: linear-gradient(145deg, rgba(30, 41, 59, 0.5) 0%, rgba(15, 23, 42, 0.7) 100%);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  backdrop-filter: blur(8px);
+}
+
+.scoreboard {
+  background: linear-gradient(145deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.8) 100%);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  backdrop-filter: blur(12px);
+}
+
+.team-logo {
+  background: linear-gradient(145deg, rgba(59, 130, 246, 0.7) 0%, rgba(37, 99, 235, 0.9) 100%);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+.standings-table {
+  background: linear-gradient(145deg, rgba(30, 41, 59, 0.5) 0%, rgba(15, 23, 42, 0.7) 100%);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+}
+
+.live-indicator {
+  background: linear-gradient(145deg, rgba(22, 163, 74, 0.5) 0%, rgba(21, 128, 61, 0.7) 100%);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.bottom-nav {
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.9), rgba(30, 41, 59, 0.8));
+  border-top: 1px solid rgba(59, 130, 246, 0.2);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+}
+
+.pitaco-button {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  transition: all 0.3s ease;
+}
+
+.pitaco-button:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.pitaco-button:active {
+  transform: translateY(1px);
+}
+
+/* Animations */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5),
+                0 0 10px rgba(59, 130, 246, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.8),
+                0 0 20px rgba(59, 130, 246, 0.8);
+  }
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes goal {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  75% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-goal {
+  animation: goal 1s ease-out;
+}
+
+/* Carousel */
+.carousel-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Floating Shoot Button - POSIÇÃO FIXA MAIS ALTA */
+.floating-shoot-button {
+  position: fixed;
+  bottom: 120px !important; /* Ainda mais alto */
+  right: 20px;
+  z-index: 9999 !important; /* Z-index máximo */
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Input and select styles */
+input, select {
+  color-scheme: dark;
+}
+
+select option {
+  background-color: #1f2937;
+  color: white;
+}
